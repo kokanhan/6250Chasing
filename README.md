@@ -6,18 +6,18 @@ A small horror chasing game with core game mechanics implemented.
 > Written with [StackEdit](https://stackedit.io/).
 ## Some notes of this chasing pattern project
 
-> If you bake the NavMesh and see your object with the baked NavMesh is floating(Y value is higher than what you expect)
-> <br> Here are solutions<br> 
+ If you bake the NavMesh and see your object with the baked NavMesh is floating(Y value is higher than what you expect)
+ <br> Here are solutions<br> 
 > https://answers.unity.com/questions/439309/dynamically-fixing-navmeshagent-base-offset.html<br>
 > https://docs.unity3d.com/Manual/nav-HeightMesh.html 
 
 Do remember to set your map objects to static before you bake them.  For now, I have not thought about the solution of locking rotation of the AI object yet. (Make it face to player)<br>
 About the navmesh makes objects ignore collision problem:<br>
-Navmesh is a baked feature. It is baked before the scene runs, meaning the shape of the navmesh can't change during runtime. You are going to have to handle the moving obstacles differently
+>Navmesh is a baked feature. It is baked before the scene runs, meaning the shape of the navmesh can't change during runtime. You are going to have to handle the moving obstacles differently
 
-> A quick review of **how to fetch objects in script:** www.youtube.com/watch?v=LXX_p33C0NM
+ A quick review of **how to fetch objects in script:** www.youtube.com/watch?v=LXX_p33C0NM
 
->**This post save my life!** 
+**This post save my life!** 
 >https://answers.unity.com/questions/1264278/unity-5-directional-light-problem-please-help.html
 > 
 > When you select a scene, Unity will automatically bake all the lights
