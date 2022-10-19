@@ -11,7 +11,7 @@ A small horror chasing game with core game mechanics implemented.
 > https://answers.unity.com/questions/439309/dynamically-fixing-navmeshagent-base-offset.html<br>
 > https://docs.unity3d.com/Manual/nav-HeightMesh.html 
 
-Do remember to set your map objects to static before you bake them.  For now, I have not thought about the solution of locking rotation of the AI object yet. (Make it face to player)<br>
+Do remember to set your map objects to static before you bake them.  For now, I have not thought about the solution of locking rotation of the AI object yet. (Make it face to player)<br><br>
 About the navmesh makes objects ignore collision problem:<br>
 >Navmesh is a baked feature. It is baked before the scene runs, meaning the shape of the navmesh can't change during runtime. You are going to have to handle the moving obstacles differently
 
