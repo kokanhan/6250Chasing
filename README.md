@@ -8,7 +8,7 @@ A small horror chasing game with core game mechanics implemented.
 
 > If you bake the NavMesh and see your object with the baked NavMesh is floating(Y value is higher than what you expect)
 > Here is the solution 
-> https://answers.unity.com/questions/439309/dynamically-fixing-navmeshagent-base-offset.html
+> https://answers.unity.com/questions/439309/dynamically-fixing-navmeshagent-base-offset.html<br>
 > https://docs.unity3d.com/Manual/nav-HeightMesh.html 
 
 Do remember to set your map objects to static before you bake them.  For now, I have not thought about the solution of locking rotation of the AI object yet. (Make it face to player)
