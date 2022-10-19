@@ -15,11 +15,11 @@ Do remember to set your map objects to static before you bake them.  For now, I 
 About the navmesh makes objects ignore collision problem:<br>
 >Navmesh is a baked feature. It is baked before the scene runs, meaning the shape of the navmesh can't change during runtime. You are going to have to handle the moving obstacles differently
 
- A quick review of **how to fetch objects in script:** www.youtube.com/watch?v=LXX_p33C0NM
+ <br>A quick review of **how to fetch objects in script:** www.youtube.com/watch?v=LXX_p33C0NM
 
 **This post save my life!** 
 >https://answers.unity.com/questions/1264278/unity-5-directional-light-problem-please-help.html
-> 
+ <br><br>
 > When you select a scene, Unity will automatically bake all the lights
 > and render things. BUT when you open a scene while playing the game in
 > the editor, Unity will NOT bake the lights,render them, fix the
@@ -30,7 +30,7 @@ About the navmesh makes objects ignore collision problem:<br>
 > "Generate Lighting" button beside it.
 
 
-><br>
+<br>
 Understanding OnTrigger methods in Unity Why and when for OnTriggerEnter(), OnTriggerStay() and OnTriggerExit()
 > https://www.patrykgalach.com/2019/09/05/understanding-ontrigger-methods/ 
 > 
