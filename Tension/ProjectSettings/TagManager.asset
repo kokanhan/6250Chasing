@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Boss Left Eye
   - Boss Right Eye
+  - Fire
+  - Door
   layers:
   - Default
   - TransparentFX

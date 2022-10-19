@@ -653,7 +653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5321098130206450944, guid: b678f761b76cbc94096273a63e43ebb5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.69
+      value: 10.06
       objectReference: {fileID: 0}
     - target: {fileID: 5321098130206450944, guid: b678f761b76cbc94096273a63e43ebb5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -661,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5321098130206450944, guid: b678f761b76cbc94096273a63e43ebb5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.85
+      value: -1.44
       objectReference: {fileID: 0}
     - target: {fileID: 5321098130206450944, guid: b678f761b76cbc94096273a63e43ebb5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1848,6 +1848,36 @@ Transform:
   m_Father: {fileID: 1983835728}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1139440759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139440760}
+  m_Layer: 0
+  m_Name: Enemy Rest Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1139440760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139440759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.51, y: 0.5, z: -4.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1147210935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,7 +3154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589941443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.73, y: 0, z: 8.27}
+  m_LocalPosition: {x: -3.1, y: 0, z: -1.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1803099348}
@@ -3144,8 +3174,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 4, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 4, z: 3.3898191}
+  m_Center: {x: 0, y: 0, z: -0.30509043}
 --- !u!195 &1589941446
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3182,6 +3212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1589941446}
   Player: {fileID: 1338573344}
+  EnemyRest: {fileID: 1139440760}
   startFollowing: 0
   Materials:
   - {fileID: 2100000, guid: 257e7c10102c0314281caab8dbc0750b, type: 2}
@@ -3208,7 +3239,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 3526.4062
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -3557,7 +3588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1689950923
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4292,7 +4323,7 @@ GameObject:
   - component: {fileID: 1848580419}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

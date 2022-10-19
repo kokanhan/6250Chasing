@@ -8,6 +8,7 @@ public class EnemyFollow : MonoBehaviour
 {
     public NavMeshAgent enemy;
     public Transform Player;
+    public Transform EnemyRest;
     public bool startFollowing;
     [Header("Enemy Apperance")]
     public Material[] Materials;
@@ -65,6 +66,18 @@ public class EnemyFollow : MonoBehaviour
                 GameOver();
             }
         }
+        if (other.gameObject.tag == "Door")//if enemy hit the closed door
+        {
+            Debug.Log("Hit the door!");
+            StartCoroutine(backoff());
+        }
+    }
+
+    IEnumerator backoff()
+    {
+        startFollowing = false;
+        enemy.SetDestination(EnemyRest.position);
+        yield return new WaitForSeconds(10.0f);
     }
 
     private void GameOver()
