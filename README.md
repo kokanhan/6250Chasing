@@ -34,8 +34,8 @@ About the navmesh makes objects ignore collision problem:<br>
 Understanding OnTrigger methods in Unity Why and when for OnTriggerEnter(), OnTriggerStay() and OnTriggerExit()
 > https://www.patrykgalach.com/2019/09/05/understanding-ontrigger-methods/ 
 > 
-> <br><br>
-> 
+ <br><br>
+ 
 > So sad that Unity still doesn't allow us to use **multithreading** .
 > In Unity, a coroutine is a method that can pause execution and return
 > control to Unity but then continue where it left off on the following
