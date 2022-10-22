@@ -23,12 +23,26 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject door_closed;
     public GameObject door_opened;
+    public GameObject openText;
+    public GameObject itself;
 
+
+    private GameObject cameraholder;
+    private TankMovement tankcontroller;
     // Start is called before the first frame update
     void Awake()
     {
         door_closed.SetActive(true);
         door_opened.SetActive(false);
+       
+
+            //door_closed.SetActive(true);
+            //door_opened.SetActive(false);
+            tankcontroller = GameObject.Find("NewTank").GetComponent<TankMovement>();
+            tankcontroller.enabled = false;
+            cameraholder = GameObject.Find("CameraHolder");
+            cameraholder.SetActive(false);
+        
     }
     void Start()
     {
@@ -42,7 +56,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
@@ -54,14 +68,14 @@ public class PlayerScript : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
         //Debug.Log("moveDirection=" + moveDirection);
-        
+
         if (Input.GetKey(KeyCode.Space) && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
         }
         else
         {
-            moveDirection.y = movementDirectionY;        
+            moveDirection.y = movementDirectionY;
             //Debug.Log("moveDirection.y="+ movementDirectionY);
         }
 
@@ -91,7 +105,50 @@ public class PlayerScript : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, 0.50f, transform.position.z);
             }
-            
+
+        }
+    }
+
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Tank")
+    //    {
+    //        openText.SetActive(true);
+    //        if (Input.GetKeyDown(KeyCode.E))
+    //        {
+    //            Debug.Log("touched!");
+    //            cameraholder.SetActive(true);
+    //            tankcontroller.enabled = true;
+    //            openText.SetActive(false);
+    //            itself.SetActive(false);
+    //        }
+    //    }
+    //}
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Tank")
+        {
+            openText.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("touched!");
+                cameraholder.SetActive(true);
+                tankcontroller.enabled = true;
+                openText.SetActive(false);
+                itself.SetActive(false);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Tank")
+        {
+            openText.SetActive(false);
+
         }
     }
 }
+
+

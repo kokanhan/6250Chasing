@@ -15,6 +15,9 @@ public class EnemyFollow : MonoBehaviour
 
     public int AllowedContactTimes = 2;
 
+    [Header("Health Point")]
+    public int EnemeyHP;
+
     private GameObject LeftEye;
     private GameObject RightEye;
     private AudioSource enemySound;
@@ -31,10 +34,9 @@ public class EnemyFollow : MonoBehaviour
     void Start()
     {
         //Object.GetComponent<MeshRenderer> ().material = Material1;
-        Debug.Log("DUmame");
         startFollowing = false;
         contactTimes = 0;
-
+        EnemeyHP = 20;
 
     }
 
@@ -85,5 +87,14 @@ public class EnemyFollow : MonoBehaviour
         
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         
+    }
+
+    public void TakeHits()
+    {
+        EnemeyHP -= 5;
+        if (EnemeyHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

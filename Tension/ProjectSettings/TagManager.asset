@@ -8,6 +8,8 @@ TagManager:
   - Boss Right Eye
   - Fire
   - Door
+  - Tank
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,9 +20,9 @@ TagManager:
   - Wall
   - Obstecle
   - Player
-  - 
-  - 
-  - 
+  - whatIsGround
+  - bullets
+  - enemy
   - 
   - 
   - 
