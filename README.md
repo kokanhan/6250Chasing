@@ -1,4 +1,4 @@
-# 6250Chasing
+# 6250Chasing & Driving
 A small horror chasing game with core game mechanics implemented. 
 
 
